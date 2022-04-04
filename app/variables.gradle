@@ -1,5 +1,5 @@
 ext {
-    applicationId = "com.test.moviehub"
+    applicationId = "com.test.restaurant"
     appVersionName = '1.0.0'
     appVersionCode = 1
     //app
