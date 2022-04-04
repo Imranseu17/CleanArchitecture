@@ -1,16 +1,13 @@
 package com.test.moviehub.domain
 
-import androidx.paging.PagingData
-import com.test.moviehub.data.model.GetDetailsResponse
-import com.test.moviehub.data.model.MovieResult
-import kotlinx.coroutines.flow.Flow
+
+import com.test.moviehub.data.model.Root
+import retrofit2.Response
 
 interface Repository {
 
-    suspend fun searchMovies(searchKeyword: String): Flow<PagingData<MovieResult>>
+    suspend fun getPopularMovies(key:String, large_area:String,format:String): Response<Root>
 
-    suspend fun getPopularMovies(): Flow<PagingData<MovieResult>>
-
-    suspend fun getDetails(movieId: Int): GetDetailsResponse
+    suspend fun getDetails(key:String, id:String,format:String): Response<Root>
 
 }

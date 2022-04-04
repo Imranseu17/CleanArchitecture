@@ -2,7 +2,7 @@ package com.test.moviehub.di
 
 import android.content.Context
 import android.util.Log
-import com.test.moviehub.BuildConfig
+import androidx.viewbinding.BuildConfig
 import com.test.moviehub.R
 import com.test.moviehub.data.remote.connection.AuthTokenInterceptor
 import com.test.moviehub.data.remote.connection.MService

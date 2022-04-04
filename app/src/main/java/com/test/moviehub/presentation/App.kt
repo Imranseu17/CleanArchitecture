@@ -1,4 +1,4 @@
-package com.test.moviehub.component
+package com.test.moviehub.presentation
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

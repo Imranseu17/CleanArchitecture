@@ -1,43 +1,32 @@
 package com.test.moviehub.data.remote.connection
 
-import com.test.moviehub.data.model.GetDetailsResponse
-import com.test.moviehub.data.model.MoviesResponse
+import com.test.moviehub.data.model.Root
+import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface MService {
 
     /**
-     * search movies.
-     * @param searchKeyword the query to perform.
-     * @param page the page number to perform.
+     * Restaurant List.
+     * @param key, large_area , format to perform.
      */
-    @GET("search/movie")
-    suspend fun searchMovies(
-        @Query("query") searchKeyword: String,
-        @Query("page") page: Int
-    ): MoviesResponse
-
-    /**
-     * popular movies.
-     * @param page the page number to perform.
-     */
-    @GET("movie/popular")
+    @GET("v1")
     suspend fun getPopularMovies(
-        @Query("page") page: Int
-    ): MoviesResponse
+        @Query("key") key:String,
+        @Query("large_area") large_area:String,
+        @Query("format")format:String
+    ): Response<Root>
 
     /**
-     * get movie details.
-     * @param movieId the movie id to perform.
+     * get restaurant details.
+     * @param key, id, format to perform.
      */
-    @GET("movie/{movie_id}")
+    @GET("v1")
     suspend fun getDetails(
-        @Path(
-            value = "movie_id",
-            encoded = true
-        ) movieId: Int
-    ): GetDetailsResponse
+        @Query("key") key:String,
+        @Query("id") id:String,
+        @Query("format")format:String
+    ): Response<Root>
 
 }

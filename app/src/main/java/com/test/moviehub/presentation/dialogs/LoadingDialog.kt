@@ -1,12 +1,10 @@
-package com.test.moviehub.component.dialogs
+package com.test.moviehub.presentation.dialogs
 
 import android.app.Dialog
 import android.content.Context
 import com.test.moviehub.R
 import dagger.hilt.android.qualifiers.ActivityContext
-import dagger.hilt.android.scopes.ActivityScoped
 import dagger.hilt.android.scopes.FragmentScoped
-import dagger.hilt.android.scopes.ViewScoped
 import javax.inject.Inject
 
 /** loading dialog to show for loading process*/

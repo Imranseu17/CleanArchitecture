@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment_main"
-        android:name="com.test.moviehub.component.fragments.SearchFragment"
+        android:name="com.test.moviehub.presentation.fragments.ShopsFragment"
         android:label="@string/searchFragment"
         tools:layout="@layout/fragment_search">
         <action
@@ -21,7 +21,7 @@
 
     <fragment
         android:id="@+id/fragment_detail"
-        android:name="com.test.moviehub.component.fragments.DetailFragment"
+        android:name="com.test.moviehub.presentation.fragments.DetailFragment"
         android:label="{title}"
         tools:layout="@layout/fragment_detail">
 

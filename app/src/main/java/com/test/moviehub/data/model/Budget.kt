@@ -1,20 +1,21 @@
 package com.test.moviehub.data.model
 
+
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Genre (
+data class Budget (
 
-  @JsonProperty("catch" ) var catch : String? ,
-  @JsonProperty("code"  ) var genreCode  : String? ,
-  @JsonProperty("name"  ) var genreName  : String? 
-
+  @JsonProperty("average" ) var average : String? ,
+  @JsonProperty("code"    ) var budgetCode    : String? ,
+  @JsonProperty("name"    ) var budgetName   : String? 
 ){
   constructor():this("","","")
 
   override fun toString(): String {
-    return "Genre(catch=$catch, genreCode=$genreCode, genreName=$genreName)"
+    return "Budget(average=$average, budgetCode=$budgetCode, budgetName=$budgetName)"
   }
 
 

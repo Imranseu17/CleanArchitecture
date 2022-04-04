@@ -1,9 +1,8 @@
-package com.test.moviehub.component.activities
+package com.test.moviehub.presentation.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.test.moviehub.R
@@ -24,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController)
     }
 
-    //set navigation component handle back clicks
+    //set navigation presentation handle back clicks
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
