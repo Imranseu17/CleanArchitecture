@@ -42,7 +42,7 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
     private fun setupObservers() {
 
-        viewModel.movie.observe(viewLifecycleOwner, Observer {
+        viewModel.restaurant.observe(viewLifecycleOwner, Observer {
             when (it.status) {
                 Resource.Status.SUCCESS -> {
                     bindCharacter(it.data)

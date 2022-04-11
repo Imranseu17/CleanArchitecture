@@ -26,8 +26,8 @@
         tools:layout="@layout/fragment_detail">
 
         <argument
-            android:name="movie"
-            app:argType="com.test.moviehub.data.model.GetDetailsResponse"
+            android:name="restaurant"
+            app:argType="com.test.restauranthub.data.model.GetDetailsResponse"
             app:nullable="false" />
 
         <argument

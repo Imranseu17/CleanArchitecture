@@ -1,7 +1,7 @@
 package com.test.restaurant.data.remote.connection
 
 import android.content.Context
-import com.test.moviehub.R
+import com.test.restauranthub.R
 
 import dagger.hilt.android.qualifiers.ApplicationContext
 import okhttp3.Interceptor

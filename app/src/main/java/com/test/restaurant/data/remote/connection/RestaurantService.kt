@@ -5,14 +5,14 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface MService {
+interface RestaurantService {
 
     /**
      * Restaurant List.
      * @param key, large_area , format to perform.
      */
     @GET("v1")
-    suspend fun getPopularMovies(
+    suspend fun getPopularrestaurants(
         @Query("key") key:String,
         @Query("large_area") large_area:String,
         @Query("format")format:String

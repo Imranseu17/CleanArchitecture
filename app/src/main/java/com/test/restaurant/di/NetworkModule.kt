@@ -3,9 +3,9 @@ package com.test.restaurant.di
 import android.content.Context
 import android.util.Log
 import androidx.viewbinding.BuildConfig
-import com.test.restaurant.R
 import com.test.restaurant.data.remote.connection.AuthTokenInterceptor
-import com.test.restaurant.data.remote.connection.MService
+import com.test.restaurant.data.remote.connection.RestaurantService
+import com.test.restauranthub.R
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -59,13 +59,13 @@ object NetworkModule {
         okHttpClient: OkHttpClient,
         @ApplicationContext mContext: Context,
         gsonConverterFactory: GsonConverterFactory
-    ): MService {
+    ): RestaurantService {
         val retrofit = Retrofit.Builder()
             .baseUrl(mContext.getString(R.string.base_url))
             .addConverterFactory(gsonConverterFactory)
             .client(okHttpClient)
             .build()
-        return retrofit.create(MService::class.java)
+        return retrofit.create(RestaurantService::class.java)
     }
 
 

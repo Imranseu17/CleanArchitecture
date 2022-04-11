@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.test.restaurant.data.model.Shop
-import com.test.restaurant.databinding.ItemMoviewBinding
+import com.test.restaurant.databinding.ItemrestaurantwBinding
 
 class ShopsAdapter(private val listener: ShopItemListener) : RecyclerView.Adapter<ShopViewHolder>() {
 
@@ -24,8 +24,8 @@ class ShopsAdapter(private val listener: ShopItemListener) : RecyclerView.Adapte
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShopViewHolder {
-        val binding: ItemMoviewBinding =
-            ItemMoviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding: ItemrestaurantwBinding =
+            ItemrestaurantwBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ShopViewHolder(binding, listener)
     }
 
@@ -34,7 +34,7 @@ class ShopsAdapter(private val listener: ShopItemListener) : RecyclerView.Adapte
     override fun onBindViewHolder(holder: ShopViewHolder, position: Int) = holder.bind(items[position])
 }
 
-class ShopViewHolder(private val itemBinding: ItemMoviewBinding,
+class ShopViewHolder(private val itemBinding: ItemrestaurantwBinding,
                      private val listener: ShopsAdapter.ShopItemListener) :
     RecyclerView.ViewHolder(itemBinding.root),
     View.OnClickListener {

@@ -12,11 +12,13 @@ class RepositoryImpl @Inject constructor(
 ) : Repository {
 
 
-    override suspend fun getPopularMovies(key:String, large_area:String,format:String): Response<Root> {
-        return remoteDataSource.getPopularMovies(key, large_area, format)
+    override suspend fun getPopularrestaurants(key:String, large_area:String,format:String):
+            Response<Root> {
+        return remoteDataSource.getPopularrestaurants(key, large_area, format)
     }
 
-    override suspend fun getDetails(key: String, id: String, format: String): Response<Root> {
+    override suspend fun getDetails(key: String, id: String, format: String):
+            Response<Root> {
        return remoteDataSource.getDetails(key,id,format)
     }
 

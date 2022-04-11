@@ -1,4 +1,4 @@
-# MovieHub
+# restaurantHub
 
 A short-time project that uses the most recent technologies, libraries and best practices.
 
@@ -6,10 +6,10 @@ A short-time project that uses the most recent technologies, libraries and best 
 ![sample](gif.gif)
 
 In this project
-- User sees a list of popular movies
-- User can search a movie name
-- User sees a list of movies matching the name searched
-- By selecting any movie, user sees a new screen containing details of the movie
+- User sees a list of popular restaurants
+- User can search a restaurant name
+- User sees a list of restaurants matching the name searched
+- By selecting any restaurant, user sees a new screen containing details of the restaurant
 
 Technologies and libraries:
 - Single Activity
@@ -21,6 +21,6 @@ Technologies and libraries:
 - Retrofit
 - Paging V3
 
-Used web service: https://www.themoviedb.org/documentation/api
+Used web service: https://www.therestaurantdb.org/documentation/api
 
 - Caution: If you encounter the timeout exception, use vpn.

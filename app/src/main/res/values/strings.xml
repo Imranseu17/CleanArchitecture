@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">MovieHub</string>
+    <string name="app_name">restaurantHub</string>
     <string name="base_url">http://webservice.recruit.co.jp/hotpepper/gourmet/</string>
     <string name="image_base_url">https://image.tmdb.org/t/p/w500</string>
     <string name="searchFragment">Search Fragment</string>
-    <string name="popular">Popular Movies</string>
+    <string name="popular">Popular restaurants</string>
     <string name="no_results">No results</string>
     <string name="overview">overview</string>
     <string name="json">application/json; charset=utf-8</string>

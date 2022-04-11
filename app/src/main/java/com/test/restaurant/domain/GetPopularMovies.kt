@@ -5,9 +5,9 @@ import com.test.restaurant.data.model.Root
 import retrofit2.Response
 import javax.inject.Inject
 
-class GetPopularMovies @Inject constructor(
+class GetPopularrestaurants @Inject constructor(
     private val repository: Repository
 ) {
     suspend fun call(): Response<Root> =
-        repository.getPopularMovies("f5c06c8896e2d2d4","Z011","json")
+        repository.getPopularrestaurants("f5c06c8896e2d2d4","Z011","json")
 }

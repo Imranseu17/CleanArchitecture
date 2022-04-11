@@ -1,5 +1,9 @@
 package com.test.restaurant.domain.base
 
+import android.provider.DocumentsContract
+import com.example.restaurant.utils.Resource
+import com.test.restaurant.data.model.Root
+import com.test.restaurant.data.model.Shop
 import com.test.restaurant.domain.exceptions.IErrorHandler
 import kotlinx.coroutines.CancellationException
 
@@ -15,7 +19,7 @@ abstract class UseCase<Response, Params>(private val errorHandler: IErrorHandler
      */
     suspend fun call(
         params: Params? = null,
-        onResult: (UseCaseCallback<Response>)?
+        onResult: (UseCaseCallback<Resource<Root>>)?
     ) {
         try {
             val result = run(params)

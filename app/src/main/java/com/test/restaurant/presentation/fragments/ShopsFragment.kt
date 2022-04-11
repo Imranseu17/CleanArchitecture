@@ -58,7 +58,7 @@ class ShopsFragment : Fragment(), ShopsAdapter.ShopItemListener {
     }
 
   fun setupObservers() {
-      viewModel.movie.observe(viewLifecycleOwner, Observer {
+      viewModel.restaurant.observe(viewLifecycleOwner, Observer {
           when (it.status) {
               Resource.Status.SUCCESS -> {
                   binding.progressBar.visibility = View.GONE

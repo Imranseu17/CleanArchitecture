@@ -6,7 +6,7 @@ import retrofit2.Response
 
 interface Repository {
 
-    suspend fun getPopularMovies(key:String, large_area:String,format:String): Response<Root>
+    suspend fun getPopularrestaurants(key:String, large_area:String,format:String): Response<Root>
 
     suspend fun getDetails(key:String, id:String,format:String): Response<Root>
 

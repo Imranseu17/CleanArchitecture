@@ -15,8 +15,8 @@ class GetDetailsVM @Inject constructor(
     private val getDetails: GetDetails
 ) : ViewModel() {
 
-    private val _movie by lazy { MutableLiveData<Resource<Shop>>() }
-    val movie: LiveData<Resource<Shop>> get() = _movie
+    private val _restaurant by lazy { MutableLiveData<Resource<Shop>>() }
+    val restaurant: LiveData<Resource<Shop>> get() = _restaurant
 
 
     private val _error by lazy { MutableLiveData<ErrorModel>() }
@@ -25,14 +25,14 @@ class GetDetailsVM @Inject constructor(
 
 
     /**
-     * Called to get details of the movie.
-     * @param id The movie id to request further details.
+     * Called to get details of the restaurant.
+     * @param id The restaurant id to request further details.
      */
     fun getDetails(id: String) {
         viewModelScope.launch {
-            getDetails.call(id, onResult = object : UseCaseCallback {
+            getDetails.call(id, onResult = object : UseCaseCallback<Any?> {
                 override fun onSuccess(result: Resource<Shop>) {
-                    _movie.value = (result)
+                    _restaurant.value = (result)
                 }
 
                 override fun onError(errorModel: ErrorModel?) {
